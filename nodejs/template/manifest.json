@@ -1,0 +1,13 @@
+{
+  "manifest-version": "0.0.1",
+  "name": "My plugin name",
+  "version": "0.0.1",
+  "description": "Built a plugin!",
+  "runtime": "nodejs",
+  "main": "index.js",
+  "handlers": {
+    "system.triggered.event": [
+      "my-handler.js"
+    ]
+  }
+}

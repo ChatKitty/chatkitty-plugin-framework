@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chatkitty.com/schemas/plugins/0.0.1/manifest.schema.json",
+  "title": "Plugin manifest",
+  "description": "A manifest describing a ChatKitty plugin",
+  "type": "object",
+  "definitions": {
+    "version": {
+      "type": "string",
+      "description": "The semantic version string",
+      "minLength": 5,
+      "maxLength": 14,
+      "pattern": "^(?:0|[1-9]\\d*)\\.(?:0|[1-9]\\d*)\\.(?:0|[1-9]\\d*)$"
+    }
+  },
+  "properties": {
+    "manifest_version": {
+      "description": "The schema version of this manifest",
+      "$ref": "#/definitions/version"
+    },
+    "name": {
+      "description": "The name of this plugin exposed to users",
+      "type": "string"
+    },
+    "version": {
+      "description": "The current version of this plugin",
+      "$ref": "#/definitions/version"
+    },
+    "description": {
+      "description": "A description of this plugin displayed to users",
+      "type": "string"
+    },
+    "runtime": {
+      "description": "The runtime this plugin executes in",
+      "type": "string",
+      "enum": ["nodejs"]
+    },
+    "main": {
+      "description": "The entry point to this plugin, implementing the ChatKitty Plugin interface",
+      "type": "string"
+    }
+  },
+  "required": ["manifest_version", "name", "version", "description", "runtime", "main"]
+}

@@ -1,3 +1,3 @@
 export abstract class Plugin {
-  abstract handleEvent(event: any, context: any): void
+  abstract onInitialize(context: any): void
 }
