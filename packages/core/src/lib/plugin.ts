@@ -1,12 +1,11 @@
 import {Context} from "./context";
-import {UserAttemptedStartSessionEvent} from "./chatfunctionevent/UserAttemptedStartSessionEvent";
-import {UserReceivedNotificationEvent} from "./chatfunctionevent/UserReceivedNotificationEvent";
-import {UserSentMessageEvent} from "./chatfunctionevent/UserSentMessageEvent";
-import {UserStartedChatSessionEvent} from "./chatfunctionevent/UserStartedChatSessionEvent";
-import {UserReadMessageEvent} from "./chatfunctionevent/UserReadMessageEvent";
-import {UserReceivedChannelInviteEvent} from "./chatfunctionevent/UserReceivedChannelInviteEvent";
-import {UserTriggeredEventEvent} from "./chatfunctionevent/UserTriggeredEventEvent";
-import {SystemTriggeredEventEvent} from "./chatfunctionevent/SystemTriggeredEventEvent";
+import {
+  SystemTriggeredEventEvent,
+  UserAttemptedStartSessionEvent, UserReadMessageEvent, UserReceivedChannelInviteEvent,
+  UserReceivedNotificationEvent,
+  UserSentMessageEvent,
+  UserStartedChatSessionEvent, UserTriggeredEventEvent
+} from "./chatfunctionevent";
 
 export abstract class Plugin<RequiredParams, OptionalParams> {
   abstract onInitialize(context: Context<RequiredParams, OptionalParams>): void
