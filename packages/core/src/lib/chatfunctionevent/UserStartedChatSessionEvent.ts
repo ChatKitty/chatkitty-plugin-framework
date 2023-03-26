@@ -1,8 +1,9 @@
-import {Channel, User} from "@chatkitty/core";
+import {ChannelResource, ChatUserResource} from "chatkitty-platform-sdk";
+
 
 export type UserStartedChatSessionEvent = {
-  user: User
-  channel: Channel
+  user: ChatUserResource
+  channel: ChannelResource
   channelUnread: boolean
   channelMessagesCount: number
 }

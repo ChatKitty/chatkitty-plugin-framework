@@ -1,7 +1,7 @@
-import {Message, ReadReceipt, User} from "@chatkitty/core";
+import {ChatUserResource, MessageReadReceiptResource, MessageResource} from "chatkitty-platform-sdk";
 
 export type UserReadMessageEvent = {
-  user: User
-  message: Message
-  receipt: ReadReceipt
+  user: ChatUserResource
+  message: MessageResource
+  receipt: MessageReadReceiptResource
 }

@@ -1,7 +1,7 @@
-import {Channel, User} from "@chatkitty/core";
+import {ChannelGenericEventResource, ChannelResource, ChatUserResource} from "chatkitty-platform-sdk";
 
 export type UserTriggeredEventEvent = {
-  user: User
-  channel: Channel
-  event: any
+  user: ChatUserResource
+  channel: ChannelResource
+  event: ChannelGenericEventResource
 }

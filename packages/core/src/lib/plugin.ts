@@ -1,13 +1,12 @@
 import {Context} from "./context";
-import {SystemTriggeredEventEvent} from "./chatfunctionevent/SystemTriggeredEventEvent";
 import {UserAttemptedStartSessionEvent} from "./chatfunctionevent/UserAttemptedStartSessionEvent";
 import {UserReceivedNotificationEvent} from "./chatfunctionevent/UserReceivedNotificationEvent";
 import {UserSentMessageEvent} from "./chatfunctionevent/UserSentMessageEvent";
 import {UserStartedChatSessionEvent} from "./chatfunctionevent/UserStartedChatSessionEvent";
-import {UserReactedToMessageEvent} from "./chatfunctionevent/UserReactedToMessageEvent";
 import {UserReadMessageEvent} from "./chatfunctionevent/UserReadMessageEvent";
 import {UserReceivedChannelInviteEvent} from "./chatfunctionevent/UserReceivedChannelInviteEvent";
 import {UserTriggeredEventEvent} from "./chatfunctionevent/UserTriggeredEventEvent";
+import {SystemTriggeredEventEvent} from "./chatfunctionevent/SystemTriggeredEventEvent";
 
 export abstract class Plugin<RequiredParams, OptionalParams> {
   abstract onInitialize(context: Context<RequiredParams, OptionalParams>): void
@@ -25,10 +24,6 @@ export abstract class Plugin<RequiredParams, OptionalParams> {
 
   async handleUserStartedChatSessionEvent(event: UserStartedChatSessionEvent,
                                           context: Context<RequiredParams, OptionalParams>) {
-  }
-
-  async handleUserReactedToMessageEvent(event: UserReactedToMessageEvent,
-                                        context: Context<RequiredParams, OptionalParams>) {
   }
 
   async handleUserReadMessageEvent(event: UserReadMessageEvent,

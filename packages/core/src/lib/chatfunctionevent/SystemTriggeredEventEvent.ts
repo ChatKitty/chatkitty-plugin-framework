@@ -1,6 +1,6 @@
-import {Channel} from "@chatkitty/core";
+import {ChannelGenericEventResource, ChannelResource} from "chatkitty-platform-sdk";
 
 export type SystemTriggeredEventEvent = {
-  channel: Channel
-  event: any
+  channel: ChannelResource
+  event: ChannelGenericEventResource
 }

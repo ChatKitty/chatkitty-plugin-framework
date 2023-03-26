@@ -1,4 +1,4 @@
-import {ChatKitty} from "@chatkitty/core";
+import { ChatKitty } from "chatkitty-platform-sdk"
 
 export type Context<RequiredParams, OptionalParams> = {
   requiredParams: RequiredParams

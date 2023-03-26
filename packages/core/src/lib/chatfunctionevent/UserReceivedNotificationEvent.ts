@@ -1,7 +1,7 @@
-import {Notification, User} from "@chatkitty/core";
+import {ChatUserResource, NotificationResource} from "chatkitty-platform-sdk";
 
 export type UserReceivedNotificationEvent = {
-  user: User
-  notification: Notification
+  user: ChatUserResource
+  notification: NotificationResource
   userHasActiveSession: boolean
 }

@@ -1,7 +1,7 @@
-import {Channel, User} from "@chatkitty/core";
+import {ChannelResource, ChatUserResource} from "chatkitty-platform-sdk";
 
 export type UserReceivedChannelInviteEvent = {
-  user: User
-  channel: Channel
-  invitingUser: User
+  user: ChatUserResource
+  channel: ChannelResource
+  invitingUser?: ChatUserResource
 }

@@ -1,7 +1,7 @@
-import {Channel, Message, User} from "@chatkitty/core";
+import {ChannelResource, ChatUserResource, MessageResource} from "chatkitty-platform-sdk";
 
 export type UserSentMessageEvent = {
-  user: User
-  channel: Channel
-  message: Message
+  user: ChatUserResource
+  channel: ChannelResource
+  message: MessageResource
 }
