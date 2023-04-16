@@ -5,9 +5,23 @@
   "description": "Built a plugin!",
   "runtime": "nodejs",
   "main": "index.js",
-  "handlers": {
-    "system.triggered.event": [
-      "my-handler.js"
-    ]
-  }
+  "events": [
+    "user.attempted.start_session"
+  ],
+  "requiredParameters": [
+    {
+      "type": "string",
+      "key": "PLUGIN_API_KEY",
+      "name": "API Key for plugin",
+      "description": "A required parameter API key for example plugin"
+    }
+  ],
+  "optionalParameters": [
+    {
+      "type": "boolean",
+      "key": "PLUGIN_BOOLEAN_OPTIONAL_KEY",
+      "name": "An optional parameter for plugin",
+      "description": "A option parameter key for example plugin"
+    }
+  ]
 }
