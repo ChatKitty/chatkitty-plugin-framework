@@ -8,19 +8,16 @@
   "events": [
     "user.attempted.start_session"
   ],
-  "requiredParameters": [
+  "parameters": [
     {
       "type": "string",
-      "key": "PLUGIN_API_KEY",
-      "name": "API Key for plugin",
-      "description": "A required parameter API key for example plugin"
-    }
-  ],
-  "optionalParameters": [
+      "name": "PLUGIN_API_KEY",
+      "description": "A required parameter API key for example plugin",
+      "required": true
+    },
     {
       "type": "boolean",
-      "key": "PLUGIN_BOOLEAN_OPTIONAL_KEY",
-      "name": "An optional parameter for plugin",
+      "name": "PLUGIN_BOOLEAN_OPTIONAL_KEY",
       "description": "A option parameter key for example plugin"
     }
   ]
