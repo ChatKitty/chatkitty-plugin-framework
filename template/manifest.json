@@ -18,7 +18,7 @@
     {
       "type": "boolean",
       "name": "PLUGIN_BOOLEAN_OPTIONAL_KEY",
-      "description": "A option parameter key for example plugin"
+      "description": "A optional parameter key for example plugin"
     }
   ]
 }
